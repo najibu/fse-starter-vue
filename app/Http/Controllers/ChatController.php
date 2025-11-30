@@ -32,9 +32,8 @@ class ChatController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        $data = $request->validated();
-
-        Message::create([
+        $data    = $request->validated();
+        $message = Message::create([
             'user_name' => $data['user_name'],
             'content'   => $data['content'],
         ]);
