@@ -37,3 +37,11 @@ export interface User {
 }
 
 export type BreadcrumbItemType = BreadcrumbItem;
+
+export interface Message {
+    id: number;
+    user_name: string;
+    content: string;
+    created_at: string | null;
+    updated_at: string | null;
+}
