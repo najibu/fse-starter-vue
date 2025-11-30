@@ -26,3 +26,4 @@ yarn-error.log
 /storage/_ide_helper.php
 /storage/.phpstorm.meta.php
 .DS_Store
+.php-cs-fixer.cache

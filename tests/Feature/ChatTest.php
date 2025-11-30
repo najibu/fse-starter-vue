@@ -38,7 +38,7 @@ class ChatTest extends TestCase
     public function test_store_creates_message_and_redirects()
     {
         $data = [
-            'content' => 'Hello world',
+            'content'   => 'Hello world',
             'user_name' => 'John Doe',
         ];
 
@@ -47,7 +47,7 @@ class ChatTest extends TestCase
         $response->assertRedirect(route('chat.index'));
 
         $this->assertDatabaseHas('messages', [
-            'content' => 'Hello world',
+            'content'   => 'Hello world',
             'user_name' => 'John Doe',
         ]);
     }

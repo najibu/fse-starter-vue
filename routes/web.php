@@ -12,7 +12,7 @@ Route::get('chat', [ChatController::class, 'index'])->name('chat.index');
 Route::get('/chat/messages', [ChatController::class, 'fetch'])->name('chat.fetch');
 Route::post('/chat/messages', [ChatController::class, 'store'])->name('chat.store');
 
-Route::middleware('auth', 'verified')->group(function () {
+Route::middleware('auth')->group(function (): void {
     Route::patch('/user/name', function () {
         request()->validate(['name' => 'required|string|max:255']);
         auth()->user()->update(['name' => request('name')]);

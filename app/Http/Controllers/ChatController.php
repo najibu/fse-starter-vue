@@ -36,7 +36,7 @@ class ChatController extends Controller
 
         Message::create([
             'user_name' => $data['user_name'],
-            'content' => $data['content'],
+            'content'   => $data['content'],
         ]);
 
         return to_route('chat.index');
