@@ -43,7 +43,7 @@
 
                     <!-- Messages List -->
                     <div v-else class="space-y-4">
-                        <div v-for="message in messageList" :key="message.id" class="rounded-md bg-white p-4 shadow-sm">
+                        <div v-for="message in messageList" :key="message.id" class="rounded-md bg-white p-4 shadow-sm" data-test="message-item">
                             <div class="flex items-baseline gap-2">
                                 <p class="font-semibold text-gray-900">{{ message.user_name || userName  }}</p>
                                 <p class="text-xs text-gray-500">{{ formatTime(message.created_at) }}</p>
